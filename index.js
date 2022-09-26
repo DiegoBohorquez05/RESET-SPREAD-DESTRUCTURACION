@@ -28,6 +28,8 @@ const sobreMiEmpresa=["El","nombre","de mi","empresa es:",...miEmpresa]
 
 console.log(sobreMiEmpresa)
 
+//------------------------------------
+
 //Destructuracion
 
 //Arreglos
@@ -40,7 +42,6 @@ console.log(num1)
 console.log(num2)
 console.log(num3)
 
-//-------------------------
 
 //Objetos
 const usuario={
@@ -53,10 +54,9 @@ console.log(documento)
 console.log(nombre)
 console.log(verificado)
 
+//--------------------------------------
+
 //Recursion
-
-
-let num=+prompt(`Digite un numero`)
 
 const parImpar=(num)=>{
     if(num==0){
@@ -68,4 +68,16 @@ const parImpar=(num)=>{
     }
 }
 
-console.log(parImpar(num))
+console.log(parImpar(5))
+
+
+//Potenciacion
+function potenciar(base,poten){
+    if(poten==1){
+        return base
+    }else{
+        return base*potenciar(base,poten-1)
+    }
+}
+console.log(potenciar(2,3))
+console.log(potenciar(2,1))
