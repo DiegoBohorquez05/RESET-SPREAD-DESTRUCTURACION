@@ -34,6 +34,7 @@
     height: 40px;
     background-color: blue;
     color: white;
+    overflow: hidden;
 }
 
 .resultado{

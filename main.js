@@ -1,15 +1,17 @@
-let tiempo=document.getElementById("dato").value;
+document.querySelector('.iniciar').addEventListener('click',()=>{
 
-let temporizador =function(tiempo){
-    if(tiempo<=0){
-        return "fin"
-    }else{ 
-        return setTimeout(temporizador,1000,tiempo-1)
+    const seg= document.getElementById('dato').value;
+
+    const tiemp= document.getElementById('contador');
+  
+    function temporizador(segundos){
+        console.log(segundos)
+        if (segundos === 0){
+            return tiemp.value = 'Fin';
+        }else{
+            tiemp.value=segundos
+            setTimeout(temporizador,1000,segundos-1)
+        }
     }
-}
-
-// let boton=document.getElementById("iniciar")
-// boton.addEventListener('click',temporizador)
-
-console.log(temporizador(1))
-document.getElementById('contador').textContent=temporizador
+    temporizador(seg);
+})
